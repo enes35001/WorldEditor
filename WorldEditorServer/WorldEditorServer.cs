@@ -44,8 +44,8 @@ namespace WorldEditorServer
                 File.Create(Util.GetRootFolder() + "\\Save\\WorldEditorServer\\ClientSideAssets.txt").Dispose();
             }
             AssetPath = AssetPath + @Util.GetRootFolder() + "\\Save\\WorldEditorServer\\myasset.unity3d";
-            RustBuster2016Server.API.AddFileToDownload(new RBDownloadable("WorldEditor\\", Util.GetRootFolder() + "\\Save\\WorldEditorServer\\myasset.unity3d"));
-            RustBuster2016Server.API.AddFileToDownload(new RBDownloadable("WorldEditor\\", Util.GetRootFolder() + "\\Save\\WorldEditorServer\\ClientSideAssets.txt"));
+            RustBuster2016Server.API.AddFileToDownload(new RBDownloadable("StromGaming\\", Util.GetRootFolder() + "\\Save\\WorldEditorServer\\myasset.unity3d"));
+            RustBuster2016Server.API.AddFileToDownload(new RBDownloadable("StromGaming\\", Util.GetRootFolder() + "\\Save\\WorldEditorServer\\ClientSideAssets.txt"));
             
             MainHolder = new GameObject();
             Handler = MainHolder.AddComponent<LoadingHandler>();
@@ -99,7 +99,7 @@ namespace WorldEditorServer
         {
             if (msgc.PluginSender == "WorldEditor")
             {
-                if (msgc.MessageByClient == "worldeditadmin")
+                if (msgc.MessageByClient == "edit")
                 {
                     msgc.ReturnMessage = user.Player.Admin ? "yes" : "no";
                 }
