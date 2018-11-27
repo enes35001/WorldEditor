@@ -59,7 +59,7 @@ namespace WorldEditorServer
                 }
                 catch
                 {
-                    Logger.LogError("[WorldEditorServer] Failure to load: " + line);
+                    Logger.LogError("[WorldEditorServer] Assetler Yuklenemedi : " + line);
                 }
             }
         }
@@ -70,7 +70,7 @@ namespace WorldEditorServer
             yield return www;
             if (www.error != null)
             {
-                Logger.LogError("[WorldEditorServer] Failure to load www: " + www.error);
+                Logger.LogError("[WorldEditorServer] Asset Yuklenemedi www: " + www.error);
             }
             bundle = www.assetBundle;
             www.Dispose();
